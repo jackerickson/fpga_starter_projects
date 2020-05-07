@@ -1,0 +1,18 @@
+Fitter Status : Successful - Thu May 07 15:01:42 2020
+Quartus Prime Version : 19.1.0 Build 670 09/22/2019 SJ Lite Edition
+Revision Name : first_fpga
+Top-level Entity Name : first_fpga
+Family : MAX 10
+Device : 10M50DAF484C7G
+Timing Models : Final
+Total logic elements : 699 / 49,760 ( 1 % )
+    Total combinational functions : 531 / 49,760 ( 1 % )
+    Dedicated logic registers : 512 / 49,760 ( 1 % )
+Total registers : 512
+Total pins : 3 / 360 ( < 1 % )
+Total virtual pins : 0
+Total memory bits : 8,192 / 1,677,312 ( < 1 % )
+Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )
+Total PLLs : 1 / 4 ( 25 % )
+UFM blocks : 0 / 1 ( 0 % )
+ADC blocks : 0 / 2 ( 0 % )

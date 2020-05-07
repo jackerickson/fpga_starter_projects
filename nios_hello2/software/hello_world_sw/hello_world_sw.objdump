@@ -1,0 +1,1842 @@
+
+hello_world_sw.elf:     file format elf32-littlenios2
+hello_world_sw.elf
+architecture: nios2:r1, flags 0x00000112:
+EXEC_P, HAS_SYMS, D_PAGED
+start address 0x00010020
+
+Program Header:
+    LOAD off    0x00001000 vaddr 0x00010000 paddr 0x00010000 align 2**12
+         filesz 0x00000020 memsz 0x00000020 flags r-x
+    LOAD off    0x00001020 vaddr 0x00010020 paddr 0x00010020 align 2**12
+         filesz 0x000010c4 memsz 0x000010c4 flags r-x
+    LOAD off    0x000020e4 vaddr 0x000110e4 paddr 0x00011158 align 2**12
+         filesz 0x00000074 memsz 0x00000074 flags rw-
+    LOAD off    0x000021cc vaddr 0x000111cc paddr 0x000111cc align 2**12
+         filesz 0x00000000 memsz 0x00000344 flags rw-
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .entry        00000020  00010000  00010000  00001000  2**5
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  1 .exceptions   00000000  00010020  00010020  00002158  2**0
+                  CONTENTS
+  2 .text         00000ec0  00010020  00010020  00001020  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  3 .rodata       00000204  00010ee0  00010ee0  00001ee0  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  4 .rwdata       00000074  000110e4  00011158  000020e4  2**2
+                  CONTENTS, ALLOC, LOAD, DATA, SMALL_DATA
+  5 .bss          00000344  000111cc  000111cc  000021cc  2**2
+                  ALLOC, SMALL_DATA
+  6 .onchip_memory 00000000  00011510  00011510  00002158  2**0
+                  CONTENTS
+  7 .comment      0000002c  00000000  00000000  00002158  2**0
+                  CONTENTS, READONLY
+  8 .debug_aranges 000001f0  00000000  00000000  00002188  2**3
+                  CONTENTS, READONLY, DEBUGGING
+  9 .debug_info   00009af0  00000000  00000000  00002378  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 10 .debug_abbrev 00001fd9  00000000  00000000  0000be68  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 11 .debug_line   000024dd  00000000  00000000  0000de41  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 12 .debug_frame  00000414  00000000  00000000  00010320  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 13 .debug_str    00000fd8  00000000  00000000  00010734  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_loc    00001b69  00000000  00000000  0001170c  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  00013278  2**2
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_ranges 00000218  00000000  00000000  00013288  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .thread_model 00000003  00000000  00000000  00014778  2**0
+                  CONTENTS, READONLY
+ 18 .cpu          00000003  00000000  00000000  0001477b  2**0
+                  CONTENTS, READONLY
+ 19 .qsys         00000001  00000000  00000000  0001477e  2**0
+                  CONTENTS, READONLY
+ 20 .simulation_enabled 00000001  00000000  00000000  0001477f  2**0
+                  CONTENTS, READONLY
+ 21 .stderr_dev   00000009  00000000  00000000  00014780  2**0
+                  CONTENTS, READONLY
+ 22 .stdin_dev    00000009  00000000  00000000  00014789  2**0
+                  CONTENTS, READONLY
+ 23 .stdout_dev   00000009  00000000  00000000  00014792  2**0
+                  CONTENTS, READONLY
+ 24 .sopc_system_name 00000004  00000000  00000000  0001479b  2**0
+                  CONTENTS, READONLY
+ 25 .quartus_project_dir 0000001f  00000000  00000000  0001479f  2**0
+                  CONTENTS, READONLY
+ 26 .jdi          00004232  00000000  00000000  000147be  2**0
+                  CONTENTS, READONLY
+SYMBOL TABLE:
+00010000 l    d  .entry	00000000 .entry
+00010020 l    d  .exceptions	00000000 .exceptions
+00010020 l    d  .text	00000000 .text
+00010ee0 l    d  .rodata	00000000 .rodata
+000110e4 l    d  .rwdata	00000000 .rwdata
+000111cc l    d  .bss	00000000 .bss
+00011510 l    d  .onchip_memory	00000000 .onchip_memory
+00000000 l    d  .comment	00000000 .comment
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_alt_sim_info	00000000 .debug_alt_sim_info
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 D:/Quartus_Projects/nios_hello2/software/hello_world_sw_bsp/obj/HAL/src/crt0.o
+00010058 l       .text	00000000 alt_after_alt_main
+00000000 l    df *ABS*	00000000 DE_seven_segment_display.c
+000110ad l     O .rodata	0000002b CSWTCH.33
+00000000 l    df *ABS*	00000000 lib2-divmod.c
+00000000 l    df *ABS*	00000000 alt_getchar.c
+00000000 l    df *ABS*	00000000 alt_load.c
+00000000 l    df *ABS*	00000000 alt_main.c
+00000000 l    df *ABS*	00000000 alt_putstr.c
+00000000 l    df *ABS*	00000000 alt_sys_init.c
+00000000 l    df *ABS*	00000000 altera_avalon_jtag_uart_read.c
+00000000 l    df *ABS*	00000000 altera_avalon_jtag_uart_write.c
+00000000 l    df *ABS*	00000000 alt_dcache_flush_all.c
+00000000 l    df *ABS*	00000000 alt_dev.c
+00010eb0 l     F .text	00000008 alt_dev_null_write
+00000000 l    df *ABS*	00000000 alt_icache_flush_all.c
+00000000 l    df *ABS*	00000000 altera_nios2_gen2_irq.c
+00000000 l    df *ABS*	00000000 strlen.c
+00010d9c g     F .text	0000002c alt_main
+00011158 g       *ABS*	00000000 __flash_rwdata_start
+000111cc g     O .bss	00000004 pause
+00010710 g     F .text	00000028 print
+000111d0 g     O .bss	00000004 dancing
+000111d4 g     O .bss	00000004 disp_off
+000100d0 g     F .text	000000b4 getActualText
+0001113c g     O .rwdata	00000004 timer
+000111d8 g     O .bss	00000004 reverse
+00010dc8 g     F .text	00000038 alt_putstr
+00011140 g     O .rwdata	00000004 jtag_uart
+00010ebc g     F .text	00000008 altera_nios2_gen2_irq_init
+00010000 g     F .entry	0000000c __reset
+00010020 g       *ABS*	00000000 __flash_exceptions_start
+00011208 g     O .bss	00000004 alt_argv
+0001913c g       *ABS*	00000000 _gp
+000110e4 g     O .rwdata	00000030 alt_fd_list
+000111dc g     O .bss	00000001 prevLetter
+00010e24 g     F .text	00000058 altera_avalon_jtag_uart_read
+00010be8 g     F .text	00000064 .hidden __udivsi3
+00010634 g     F .text	00000054 getBinLow
+000111e0 g     O .bss	00000004 flag
+000111e4 g     O .bss	00000004 length
+00011144 g     O .rwdata	00000004 alt_max_fd
+00011510 g       *ABS*	00000000 __bss_end
+00010ca8 g     F .text	00000040 alt_getchar
+00010600 g     F .text	00000034 getBinLowLow
+00011114 g     O .rwdata	00000028 alt_dev_null
+00010224 g     F .text	0000009c initializeDisplay
+00010eac g     F .text	00000004 alt_dcache_flush_all
+00011158 g       *ABS*	00000000 __ram_rwdata_end
+00010000 g       *ABS*	00000000 __alt_mem_onchip_memory
+00010738 g     F .text	00000298 print_letters
+00011148 g     O .rwdata	00000008 alt_dev_list
+00011210 g     O .bss	00000200 text
+000111e8 g     O .bss	00000004 dance_dir
+000110e4 g       *ABS*	00000000 __ram_rodata_end
+00010c4c g     F .text	0000005c .hidden __umodsi3
+00011510 g       *ABS*	00000000 end
+00020000 g       *ABS*	00000000 __alt_stack_pointer
+00010e7c g     F .text	00000030 altera_avalon_jtag_uart_write
+00010020 g     F .text	0000003c _start
+00010e20 g     F .text	00000004 alt_sys_init
+0001005c g     F .text	00000074 getTxt
+000110e4 g       *ABS*	00000000 __ram_rwdata_start
+00010ee0 g       *ABS*	00000000 __ram_rodata_start
+000111ec g     O .bss	00000004 slowdown_toggle
+00011510 g       *ABS*	00000000 __alt_stack_base
+0001058c g     F .text	00000074 getBinaryLetter
+00011410 g     O .bss	00000100 enteredText
+000111cc g       *ABS*	00000000 __bss_start
+000109d0 g     F .text	00000120 main
+00011204 g     O .bss	00000004 alt_envp
+00010af0 g     F .text	00000080 .hidden __divsi3
+000102e4 g     F .text	00000024 updateTimer
+00010ee0 g       *ABS*	00000000 __flash_rodata_start
+00010e00 g     F .text	00000020 alt_irq_init
+00010308 g     F .text	000000b8 updateLocation
+0001120c g     O .bss	00000004 alt_argc
+00010688 g     F .text	00000054 getBinHigh
+000103c0 g     F .text	000001a4 updatePBState
+000111f0 g     O .bss	00000004 toggle
+00011150 g     O .rwdata	00000008 alt_fs_list
+000111f4 g     O .bss	00000004 speedup_toggle
+00010020 g       *ABS*	00000000 __ram_exceptions_start
+000111f8 g     O .bss	00000004 upsideDown
+00011158 g       *ABS*	00000000 _edata
+000111fc g     O .bss	00000004 dance_state
+00011510 g       *ABS*	00000000 _end
+00010020 g       *ABS*	00000000 __ram_exceptions_end
+00010b70 g     F .text	00000078 .hidden __modsi3
+00020000 g       *ABS*	00000000 __alt_data_end
+000106dc g     F .text	00000034 getBinHighHigh
+0001000c g       .entry	00000000 _exit
+00010564 g     F .text	00000028 getBin
+00010ec4 g     F .text	0000001c strlen
+00010eb8 g     F .text	00000004 alt_icache_flush_all
+00010184 g     F .text	000000a0 updateText
+00011200 g     O .bss	00000004 re_enter
+00010ce8 g     F .text	000000b4 alt_load
+000102c0 g     F .text	00000024 clearActualText
+
+
+
+Disassembly of section .entry:
+
+00010000 <__reset>:
+ * Jump to the _start entry point in the .text section if reset code
+ * is allowed or if optimizing for RTL simulation.
+ */
+#if defined(ALT_ALLOW_CODE_AT_RESET) || defined(ALT_SIM_OPTIMIZE)
+    /* Jump to the _start entry point in the .text section. */
+    movhi r1, %hi(_start)
+   10000:	00400074 	movhi	at,1
+    ori r1, r1, %lo(_start)
+   10004:	08400814 	ori	at,at,32
+    jmp r1
+   10008:	0800683a 	jmp	at
+
+0001000c <_exit>:
+	...
+
+Disassembly of section .text:
+
+00010020 <_start>:
+
+    /*
+     * Now that the caches are initialized, set up the stack pointer and global pointer.
+     * The values provided by the linker are assumed to be correctly aligned.
+     */
+    movhi sp, %hi(__alt_stack_pointer)
+   10020:	06c000b4 	movhi	sp,2
+    ori sp, sp, %lo(__alt_stack_pointer)
+   10024:	dec00014 	ori	sp,sp,0
+    movhi gp, %hi(_gp)
+   10028:	06800074 	movhi	gp,1
+    ori gp, gp, %lo(_gp)
+   1002c:	d6a44f14 	ori	gp,gp,37180
+ */
+#ifndef ALT_SIM_OPTIMIZE
+    /* Log that the BSS is about to be cleared. */
+    ALT_LOG_PUTS(alt_log_msg_bss)
+
+    movhi r2, %hi(__bss_start)
+   10030:	00800074 	movhi	r2,1
+    ori r2, r2, %lo(__bss_start)
+   10034:	10847314 	ori	r2,r2,4556
+
+    movhi r3, %hi(__bss_end)
+   10038:	00c00074 	movhi	r3,1
+    ori r3, r3, %lo(__bss_end)
+   1003c:	18c54414 	ori	r3,r3,5392
+
+    beq r2, r3, 1f
+   10040:	10c00326 	beq	r2,r3,10050 <_start+0x30>
+
+0:
+    stw zero, (r2)
+   10044:	10000015 	stw	zero,0(r2)
+    addi r2, r2, 4
+   10048:	10800104 	addi	r2,r2,4
+    bltu r2, r3, 0b
+   1004c:	10fffd36 	bltu	r2,r3,10044 <_start+0x24>
+     * section aren't defined until alt_load() has been called).
+     */
+    mov   et, zero
+#endif
+
+    call alt_load
+   10050:	0010ce80 	call	10ce8 <alt_load>
+
+    /* Log that alt_main is about to be called. */
+    ALT_LOG_PUTS(alt_log_msg_alt_main)
+
+    /* Call the C entry point. It should never return. */
+    call alt_main
+   10054:	0010d9c0 	call	10d9c <alt_main>
+
+00010058 <alt_after_alt_main>:
+
+    /* Wait in infinite loop in case alt_main does return. */
+alt_after_alt_main:
+    br alt_after_alt_main
+   10058:	003fff06 	br	10058 <alt_after_alt_main>
+
+0001005c <getTxt>:
+		  re_enter = 0;	//We don't want to retrigger the entering process until the user does
+	}
+	return;
+}
+//Gets the text the user placed on the console
+char getTxt(char curr){
+   1005c:	2007883a 	mov	r3,r4
+	if(curr == '\n')
+   10060:	21003fcc 	andi	r4,r4,255
+   10064:	2100201c 	xori	r4,r4,128
+   10068:	213fe004 	addi	r4,r4,-128
+   1006c:	210002a0 	cmpeqi	r4,r4,10
+   10070:	2000151e 	bne	r4,zero,100c8 <getTxt+0x6c>
+char getTxt(char curr){
+   10074:	defffe04 	addi	sp,sp,-8
+   10078:	dc000015 	stw	r16,0(sp)
+   1007c:	dfc00115 	stw	ra,4(sp)
+		return curr;
+	int idx = 0;	//Keep track of what we are adding
+   10080:	0021883a 	mov	r16,zero
+	char newCurr = curr;
+	//Keep adding characters until we get to the end of the line
+	while (newCurr != '\n'){
+		enteredText[idx] = newCurr;	//Add the next letter to the entered text register
+   10084:	00800074 	movhi	r2,1
+   10088:	8085883a 	add	r2,r16,r2
+   1008c:	10c50405 	stb	r3,5136(r2)
+		idx ++;
+		newCurr = alt_getchar();	//Get the next character
+   10090:	0010ca80 	call	10ca8 <alt_getchar>
+   10094:	1007883a 	mov	r3,r2
+	while (newCurr != '\n'){
+   10098:	10803fcc 	andi	r2,r2,255
+   1009c:	1080201c 	xori	r2,r2,128
+   100a0:	10bfe004 	addi	r2,r2,-128
+   100a4:	10800298 	cmpnei	r2,r2,10
+		idx ++;
+   100a8:	84000044 	addi	r16,r16,1
+	while (newCurr != '\n'){
+   100ac:	103ff51e 	bne	r2,zero,10084 <getTxt+0x28>
+	}
+	length = idx;
+	return newCurr;
+}
+   100b0:	00800284 	movi	r2,10
+	length = idx;
+   100b4:	d4202a15 	stw	r16,-32600(gp)
+}
+   100b8:	dfc00117 	ldw	ra,4(sp)
+   100bc:	dc000017 	ldw	r16,0(sp)
+   100c0:	dec00204 	addi	sp,sp,8
+   100c4:	f800283a 	ret
+   100c8:	00800284 	movi	r2,10
+   100cc:	f800283a 	ret
+
+000100d0 <getActualText>:
+//Takes the user's input and only uses the allowed letters.  Returns the length of the string entered
+int getActualText(){
+	int idx = 0;	//We need two indicies because the entered and actual text sequences need not be aligned
+	char currentLetter; //Keeps track of the character we are wanting to add
+	//Go through each letter in the entered text
+	for (int i = 0; i <= length; i++){
+   100d0:	d2602a17 	ldw	r9,-32600(gp)
+   100d4:	000b883a 	mov	r5,zero
+	int idx = 0;	//We need two indicies because the entered and actual text sequences need not be aligned
+   100d8:	0005883a 	mov	r2,zero
+			currentLetter -= 32;
+		}
+		switch(currentLetter){
+		case 'M':
+			//We build the letter "M" from two "n's," so we need to change the index twice in the actual text
+			text[idx] = 'N';
+   100dc:	01c01384 	movi	r7,78
+			text[idx + 1] = 'N';
+			idx += 2;
+			break;
+		case 'W':
+			//We build the letter "W" from two "v's," so we need to change the index twice in the actual text
+			text[idx] = 'V';
+   100e0:	02001584 	movi	r8,86
+	for (int i = 0; i <= length; i++){
+   100e4:	4940010e 	bge	r9,r5,100ec <getActualText+0x1c>
+		}
+
+
+	}
+	return idx;
+}
+   100e8:	f800283a 	ret
+		currentLetter = enteredText[i];
+   100ec:	00c00074 	movhi	r3,1
+   100f0:	28c7883a 	add	r3,r5,r3
+   100f4:	19050403 	ldbu	r4,5136(r3)
+		if (currentLetter > 96){
+   100f8:	20c03fcc 	andi	r3,r4,255
+   100fc:	18c0201c 	xori	r3,r3,128
+   10100:	18ffe004 	addi	r3,r3,-128
+   10104:	18c01850 	cmplti	r3,r3,97
+   10108:	1800011e 	bne	r3,zero,10110 <getActualText+0x40>
+			currentLetter -= 32;
+   1010c:	213ff804 	addi	r4,r4,-32
+		switch(currentLetter){
+   10110:	21803fcc 	andi	r6,r4,255
+   10114:	3180201c 	xori	r6,r6,128
+   10118:	31bfe004 	addi	r6,r6,-128
+   1011c:	32801360 	cmpeqi	r10,r6,77
+   10120:	10c00044 	addi	r3,r2,1
+   10124:	5000061e 	bne	r10,zero,10140 <getActualText+0x70>
+   10128:	318015e0 	cmpeqi	r6,r6,87
+   1012c:	30000e1e 	bne	r6,zero,10168 <getActualText+0x98>
+			text[idx] = currentLetter;
+   10130:	01800074 	movhi	r6,1
+   10134:	118d883a 	add	r6,r2,r6
+   10138:	31048405 	stb	r4,4624(r6)
+			idx++;
+   1013c:	00000706 	br	1015c <getActualText+0x8c>
+			text[idx] = 'N';
+   10140:	01000074 	movhi	r4,1
+   10144:	1109883a 	add	r4,r2,r4
+   10148:	21c48405 	stb	r7,4624(r4)
+			text[idx + 1] = 'N';
+   1014c:	01000074 	movhi	r4,1
+   10150:	1909883a 	add	r4,r3,r4
+   10154:	21c48405 	stb	r7,4624(r4)
+			idx += 2;
+   10158:	10c00084 	addi	r3,r2,2
+	for (int i = 0; i <= length; i++){
+   1015c:	29400044 	addi	r5,r5,1
+   10160:	1805883a 	mov	r2,r3
+   10164:	003fdf06 	br	100e4 <getActualText+0x14>
+			text[idx] = 'V';
+   10168:	01000074 	movhi	r4,1
+   1016c:	1109883a 	add	r4,r2,r4
+   10170:	22048405 	stb	r8,4624(r4)
+			text[idx + 1] = 'V';
+   10174:	01000074 	movhi	r4,1
+   10178:	1909883a 	add	r4,r3,r4
+   1017c:	22048405 	stb	r8,4624(r4)
+   10180:	003ff506 	br	10158 <getActualText+0x88>
+
+00010184 <updateText>:
+	if (re_enter){
+   10184:	d0a03117 	ldw	r2,-32572(gp)
+   10188:	10002526 	beq	r2,zero,10220 <updateText+0x9c>
+		  alt_putstr("Put your new text into the console and press ENTER\n");
+   1018c:	01000074 	movhi	r4,1
+void updateText(){
+   10190:	defffe04 	addi	sp,sp,-8
+		  alt_putstr("Put your new text into the console and press ENTER\n");
+   10194:	2103b804 	addi	r4,r4,3808
+void updateText(){
+   10198:	dc000015 	stw	r16,0(sp)
+   1019c:	dfc00115 	stw	ra,4(sp)
+		  alt_putstr("Put your new text into the console and press ENTER\n");
+   101a0:	0010dc80 	call	10dc8 <alt_putstr>
+		  prevLetter = '!';
+   101a4:	00800844 	movi	r2,33
+   101a8:	d0a02805 	stb	r2,-32608(gp)
+	int idx = 0;	//Keep track of what we are adding
+   101ac:	0021883a 	mov	r16,zero
+	char newCurr = curr;
+   101b0:	00c00844 	movi	r3,33
+		enteredText[idx] = newCurr;	//Add the next letter to the entered text register
+   101b4:	00800074 	movhi	r2,1
+   101b8:	8085883a 	add	r2,r16,r2
+   101bc:	10c50405 	stb	r3,5136(r2)
+		newCurr = alt_getchar();	//Get the next character
+   101c0:	0010ca80 	call	10ca8 <alt_getchar>
+   101c4:	1007883a 	mov	r3,r2
+	while (newCurr != '\n'){
+   101c8:	10803fcc 	andi	r2,r2,255
+   101cc:	1080201c 	xori	r2,r2,128
+   101d0:	10bfe004 	addi	r2,r2,-128
+   101d4:	11000298 	cmpnei	r4,r2,10
+		idx ++;
+   101d8:	84000044 	addi	r16,r16,1
+	while (newCurr != '\n'){
+   101dc:	203ff51e 	bne	r4,zero,101b4 <updateText+0x30>
+	length = idx;
+   101e0:	d4202a15 	stw	r16,-32600(gp)
+		  prevLetter = getTxt(prevLetter);
+   101e4:	d0a02805 	stb	r2,-32608(gp)
+		  length = getActualText();		//Adjust for special characters such as 'W' or 'M'
+   101e8:	00100d00 	call	100d0 <getActualText>
+   101ec:	d0a02a15 	stw	r2,-32600(gp)
+		  if(length > 0)
+   101f0:	0080030e 	bge	zero,r2,10200 <updateText+0x7c>
+			  text[length-1] = '\0';		//Get rid of any extra stuff at the end
+   101f4:	00c00074 	movhi	r3,1
+   101f8:	10c7883a 	add	r3,r2,r3
+   101fc:	180483c5 	stb	zero,4623(r3)
+		  alt_putstr("Got it!  If you want to change the text, press KEY1 \n");
+   10200:	01000074 	movhi	r4,1
+   10204:	2103c504 	addi	r4,r4,3860
+   10208:	0010dc80 	call	10dc8 <alt_putstr>
+		  re_enter = 0;	//We don't want to retrigger the entering process until the user does
+   1020c:	d0203115 	stw	zero,-32572(gp)
+}
+   10210:	dfc00117 	ldw	ra,4(sp)
+   10214:	dc000017 	ldw	r16,0(sp)
+   10218:	dec00204 	addi	sp,sp,8
+   1021c:	f800283a 	ret
+   10220:	f800283a 	ret
+
+00010224 <initializeDisplay>:
+void initializeDisplay(){
+   10224:	deffff04 	addi	sp,sp,-4
+	dance_state = 2; //Start with the letters in the middle
+   10228:	00800084 	movi	r2,2
+void initializeDisplay(){
+   1022c:	dfc00015 	stw	ra,0(sp)
+	dance_state = 2; //Start with the letters in the middle
+   10230:	d0a03015 	stw	r2,-32576(gp)
+	flag = 0;
+   10234:	d0202915 	stw	zero,-32604(gp)
+	pause = 0;
+   10238:	d0202415 	stw	zero,-32624(gp)
+	reverse = 0;
+   1023c:	d0202715 	stw	zero,-32612(gp)
+	upsideDown = 0;
+   10240:	d0202f15 	stw	zero,-32580(gp)
+	toggle = 0;
+   10244:	d0202d15 	stw	zero,-32588(gp)
+	speedup_toggle = 0;
+   10248:	d0202e15 	stw	zero,-32584(gp)
+	slowdown_toggle = 0;
+   1024c:	d0202c15 	stw	zero,-32592(gp)
+	dancing = 0;
+   10250:	d0202515 	stw	zero,-32620(gp)
+	re_enter = 0;
+   10254:	d0203115 	stw	zero,-32572(gp)
+	return let;
+}
+//Prints each of the letters out to the screen
+void print(int let5, int let4, int let3, int let2, int let1, int let0){
+	//Takes the binary value for each letter and places it on each of the six 7-segment displays
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, let5);
+   10258:	00801fc4 	movi	r2,127
+   1025c:	00c000b4 	movhi	r3,2
+   10260:	18840435 	stwio	r2,4112(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, let4);
+   10264:	18840835 	stwio	r2,4128(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, let3);
+   10268:	18840035 	stwio	r2,4096(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, let2);
+   1026c:	18840c35 	stwio	r2,4144(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, let1);
+   10270:	18841035 	stwio	r2,4160(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, let0);
+   10274:	18841435 	stwio	r2,4176(r3)
+	alt_putstr("Hello from Nios II!\n");
+   10278:	01000074 	movhi	r4,1
+	prevLetter = '!';
+   1027c:	00800844 	movi	r2,33
+	alt_putstr("Hello from Nios II!\n");
+   10280:	2103d304 	addi	r4,r4,3916
+	prevLetter = '!';
+   10284:	d0a02805 	stb	r2,-32608(gp)
+	alt_putstr("Hello from Nios II!\n");
+   10288:	0010dc80 	call	10dc8 <alt_putstr>
+	alt_putstr("Type what you would like to display and press ENTER\n");
+   1028c:	01000074 	movhi	r4,1
+   10290:	2103d904 	addi	r4,r4,3940
+   10294:	0010dc80 	call	10dc8 <alt_putstr>
+	prevLetter = getTxt(prevLetter);	//Snag what the user put in
+   10298:	d1202807 	ldb	r4,-32608(gp)
+   1029c:	001005c0 	call	1005c <getTxt>
+   102a0:	d0a02805 	stb	r2,-32608(gp)
+	length = getActualText();		//Adjust for special characters such as 'W' or 'M'
+   102a4:	00100d00 	call	100d0 <getActualText>
+	alt_putstr("Got it!  If you want to change the text, press KEY1\n");
+   102a8:	01000074 	movhi	r4,1
+   102ac:	2103e704 	addi	r4,r4,3996
+	length = getActualText();		//Adjust for special characters such as 'W' or 'M'
+   102b0:	d0a02a15 	stw	r2,-32600(gp)
+}
+   102b4:	dfc00017 	ldw	ra,0(sp)
+   102b8:	dec00104 	addi	sp,sp,4
+	alt_putstr("Got it!  If you want to change the text, press KEY1\n");
+   102bc:	0010dc81 	jmpi	10dc8 <alt_putstr>
+
+000102c0 <clearActualText>:
+	for(int i = 0; i <= length; i++){
+   102c0:	d1202a17 	ldw	r4,-32600(gp)
+   102c4:	0005883a 	mov	r2,zero
+   102c8:	2080010e 	bge	r4,r2,102d0 <clearActualText+0x10>
+}
+   102cc:	f800283a 	ret
+		text[i] = '\0';
+   102d0:	00c00074 	movhi	r3,1
+   102d4:	10c7883a 	add	r3,r2,r3
+   102d8:	18048405 	stb	zero,4624(r3)
+	for(int i = 0; i <= length; i++){
+   102dc:	10800044 	addi	r2,r2,1
+   102e0:	003ff906 	br	102c8 <clearActualText+0x8>
+
+000102e4 <updateTimer>:
+int updateTimer(int tmr, int speedup_tog, int slowdown_tog){
+   102e4:	2005883a 	mov	r2,r4
+	if (speedup_tog){
+   102e8:	28000426 	beq	r5,zero,102fc <updateTimer+0x18>
+		if ((tmr - UPDATECLOCKAMT) > 0)//We don't want the timer to go negative
+   102ec:	20c7d050 	cmplti	r3,r4,8001
+   102f0:	1800041e 	bne	r3,zero,10304 <updateTimer+0x20>
+			return tmr - UPDATECLOCKAMT;
+   102f4:	20b83004 	addi	r2,r4,-8000
+   102f8:	f800283a 	ret
+	else if (slowdown_tog)
+   102fc:	30000126 	beq	r6,zero,10304 <updateTimer+0x20>
+		return tmr + UPDATECLOCKAMT;
+   10300:	2087d004 	addi	r2,r4,8000
+}
+   10304:	f800283a 	ret
+
+00010308 <updateLocation>:
+		  if (pause == 0){
+   10308:	d0a02417 	ldw	r2,-32624(gp)
+int updateLocation(int loc, int len){
+   1030c:	defffd04 	addi	sp,sp,-12
+   10310:	dc400115 	stw	r17,4(sp)
+   10314:	dc000015 	stw	r16,0(sp)
+   10318:	dfc00215 	stw	ra,8(sp)
+   1031c:	2021883a 	mov	r16,r4
+   10320:	2823883a 	mov	r17,r5
+		  if (pause == 0){
+   10324:	1000131e 	bne	r2,zero,10374 <updateLocation+0x6c>
+			  dance_state = 2;
+   10328:	00800084 	movi	r2,2
+   1032c:	d0a03015 	stw	r2,-32576(gp)
+			  if (reverse == 0)
+   10330:	d0a02717 	ldw	r2,-32612(gp)
+			  dancing = 0;
+   10334:	d0202515 	stw	zero,-32620(gp)
+			  if (reverse == 0)
+   10338:	10000c1e 	bne	r2,zero,1036c <updateLocation+0x64>
+				  loc++;   //Move the display forwards if the backwards button is NOT toggled (KEY2)
+   1033c:	24000044 	addi	r16,r4,1
+		  if (loc >= len){ //If we have reached the end of the string, reset the locator back to the beginning
+   10340:	84401c16 	blt	r16,r17,103b4 <updateLocation+0xac>
+			  return loc % len;
+   10344:	8009883a 	mov	r4,r16
+   10348:	880b883a 	mov	r5,r17
+   1034c:	0010b700 	call	10b70 <__modsi3>
+   10350:	1021883a 	mov	r16,r2
+}
+   10354:	8005883a 	mov	r2,r16
+   10358:	dfc00217 	ldw	ra,8(sp)
+   1035c:	dc400117 	ldw	r17,4(sp)
+   10360:	dc000017 	ldw	r16,0(sp)
+   10364:	dec00304 	addi	sp,sp,12
+   10368:	f800283a 	ret
+				  loc--;  //Otherwise we go backwards if the user toggled the display to go backwards
+   1036c:	243fffc4 	addi	r16,r4,-1
+   10370:	003ff306 	br	10340 <updateLocation+0x38>
+			  if (dancing) {
+   10374:	d0a02517 	ldw	r2,-32620(gp)
+			  reverse = 0;
+   10378:	d0202715 	stw	zero,-32612(gp)
+			  if (dancing) {
+   1037c:	103ff026 	beq	r2,zero,10340 <updateLocation+0x38>
+				  if (dance_dir){
+   10380:	d0a02b17 	ldw	r2,-32596(gp)
+   10384:	d1203017 	ldw	r4,-32576(gp)
+   10388:	10000526 	beq	r2,zero,103a0 <updateLocation+0x98>
+					  dance_state = (dance_state + 1) % 5;}
+   1038c:	01400144 	movi	r5,5
+   10390:	21000044 	addi	r4,r4,1
+   10394:	0010b700 	call	10b70 <__modsi3>
+					  dance_state = (dance_state - 1);
+   10398:	d0a03015 	stw	r2,-32576(gp)
+   1039c:	003fe806 	br	10340 <updateLocation+0x38>
+   103a0:	20bfffc4 	addi	r2,r4,-1
+					  if (dance_state < 0)
+   103a4:	103ffc0e 	bge	r2,zero,10398 <updateLocation+0x90>
+						  dance_state = dance_state + 5;
+   103a8:	21000104 	addi	r4,r4,4
+   103ac:	d1203015 	stw	r4,-32576(gp)
+   103b0:	003fe306 	br	10340 <updateLocation+0x38>
+		  else if (loc < 0){ //If we have reached the end of the string backwards, we need to jump back the other way
+   103b4:	803fe70e 	bge	r16,zero,10354 <updateLocation+0x4c>
+			  return loc + len;
+   103b8:	8461883a 	add	r16,r16,r17
+   103bc:	003fe506 	br	10354 <updateLocation+0x4c>
+
+000103c0 <updatePBState>:
+void updatePBState(int button_datain){
+   103c0:	defffe04 	addi	sp,sp,-8
+   103c4:	dc000015 	stw	r16,0(sp)
+   103c8:	dfc00115 	stw	ra,4(sp)
+        if ((button_datain & 1) == 0 && toggle == 0){
+   103cc:	2080004c 	andi	r2,r4,1
+void updatePBState(int button_datain){
+   103d0:	2021883a 	mov	r16,r4
+        if ((button_datain & 1) == 0 && toggle == 0){
+   103d4:	1000601e 	bne	r2,zero,10558 <updatePBState+0x198>
+   103d8:	d0a02d17 	ldw	r2,-32588(gp)
+   103dc:	1000181e 	bne	r2,zero,10440 <updatePBState+0x80>
+              switch(flag){
+   103e0:	d0a02917 	ldw	r2,-32604(gp)
+   103e4:	10c002a8 	cmpgeui	r3,r2,10
+   103e8:	1800101e 	bne	r3,zero,1042c <updatePBState+0x6c>
+   103ec:	100490ba 	slli	r2,r2,2
+   103f0:	00c00074 	movhi	r3,1
+   103f4:	10c7883a 	add	r3,r2,r3
+   103f8:	18810017 	ldw	r2,1024(r3)
+   103fc:	1000683a 	jmp	r2
+   10400:	00010428 	cmpgeui	zero,zero,1040
+   10404:	00010464 	muli	zero,zero,1041
+   10408:	0001047c 	xorhi	zero,zero,1041
+   1040c:	00010490 	cmplti	zero,zero,1042
+   10410:	000104a4 	muli	zero,zero,1042
+   10414:	000104bc 	xorhi	zero,zero,1042
+   10418:	000104d8 	cmpnei	zero,zero,1043
+   1041c:	000104f4 	movhi	zero,1043
+   10420:	00010514 	movui	zero,1044
+   10424:	00010534 	movhi	zero,1044
+                      disp_off=0;
+   10428:	d0202615 	stw	zero,-32616(gp)
+              toggle = 1;
+   1042c:	00800044 	movi	r2,1
+   10430:	d0a02d15 	stw	r2,-32588(gp)
+              flag++;
+   10434:	d0a02917 	ldw	r2,-32604(gp)
+   10438:	10800044 	addi	r2,r2,1
+   1043c:	d0a02915 	stw	r2,-32604(gp)
+        if ((button_datain & 2) == 0){
+   10440:	8400008c 	andi	r16,r16,2
+   10444:	8000031e 	bne	r16,zero,10454 <updatePBState+0x94>
+              re_enter = 1;
+   10448:	00800044 	movi	r2,1
+              flag = 0;
+   1044c:	d0202915 	stw	zero,-32604(gp)
+              re_enter = 1;
+   10450:	d0a03115 	stw	r2,-32572(gp)
+}
+   10454:	dfc00117 	ldw	ra,4(sp)
+   10458:	dc000017 	ldw	r16,0(sp)
+   1045c:	dec00204 	addi	sp,sp,8
+   10460:	f800283a 	ret
+                  speedup_toggle=1;
+   10464:	00800044 	movi	r2,1
+                  alt_putstr("Speeding up! (Hold down to speed up more)\n");
+   10468:	01000074 	movhi	r4,1
+                  speedup_toggle=1;
+   1046c:	d0a02e15 	stw	r2,-32584(gp)
+                  alt_putstr("Speeding up! (Hold down to speed up more)\n");
+   10470:	2103f504 	addi	r4,r4,4052
+                  alt_putstr("Even Faster (Hold down to speed up more)!!!\n");
+   10474:	0010dc80 	call	10dc8 <alt_putstr>
+                  break;
+   10478:	003fec06 	br	1042c <updatePBState+0x6c>
+                  speedup_toggle=1;
+   1047c:	00800044 	movi	r2,1
+                  alt_putstr("Even Faster (Hold down to speed up more)!!!\n");
+   10480:	01000074 	movhi	r4,1
+                  speedup_toggle=1;
+   10484:	d0a02e15 	stw	r2,-32584(gp)
+                  alt_putstr("Even Faster (Hold down to speed up more)!!!\n");
+   10488:	21040004 	addi	r4,r4,4096
+   1048c:	003ff906 	br	10474 <updatePBState+0xb4>
+                  speedup_toggle=1;
+   10490:	00800044 	movi	r2,1
+                  alt_putstr("Faster Still!!!\n");
+   10494:	01000074 	movhi	r4,1
+                  speedup_toggle=1;
+   10498:	d0a02e15 	stw	r2,-32584(gp)
+                  alt_putstr("Faster Still!!!\n");
+   1049c:	21040c04 	addi	r4,r4,4144
+   104a0:	003ff406 	br	10474 <updatePBState+0xb4>
+                      slowdown_toggle=1;
+   104a4:	00800044 	movi	r2,1
+                      alt_putstr("Slowing Down...\n");
+   104a8:	01000074 	movhi	r4,1
+                  speedup_toggle=0;
+   104ac:	d0202e15 	stw	zero,-32584(gp)
+                      slowdown_toggle=1;
+   104b0:	d0a02c15 	stw	r2,-32592(gp)
+                      alt_putstr("Slowing Down...\n");
+   104b4:	21041104 	addi	r4,r4,4164
+   104b8:	003fee06 	br	10474 <updatePBState+0xb4>
+                  alt_putstr("Backwards!\n");
+   104bc:	01000074 	movhi	r4,1
+   104c0:	21041604 	addi	r4,r4,4184
+                  slowdown_toggle=0;
+   104c4:	d0202c15 	stw	zero,-32592(gp)
+                  alt_putstr("Backwards!\n");
+   104c8:	0010dc80 	call	10dc8 <alt_putstr>
+                  reverse = 1;
+   104cc:	00800044 	movi	r2,1
+   104d0:	d0a02715 	stw	r2,-32612(gp)
+                  break;
+   104d4:	003fd506 	br	1042c <updatePBState+0x6c>
+                  alt_putstr("Topsy-Turvey!\n");
+   104d8:	01000074 	movhi	r4,1
+   104dc:	21041904 	addi	r4,r4,4196
+   104e0:	0010dc80 	call	10dc8 <alt_putstr>
+                      upsideDown = 1;
+   104e4:	00800044 	movi	r2,1
+   104e8:	d0a02f15 	stw	r2,-32580(gp)
+                      reverse = 0;
+   104ec:	d0202715 	stw	zero,-32612(gp)
+                      break;
+   104f0:	003fce06 	br	1042c <updatePBState+0x6c>
+                        pause = 1;
+   104f4:	00800044 	movi	r2,1
+                        alt_putstr("Let's Dance!\n");
+   104f8:	01000074 	movhi	r4,1
+                  upsideDown = 0;
+   104fc:	d0202f15 	stw	zero,-32580(gp)
+                        pause = 1;
+   10500:	d0a02415 	stw	r2,-32624(gp)
+                        dancing = 1;
+   10504:	d0a02515 	stw	r2,-32620(gp)
+                        dance_dir = 1;
+   10508:	d0a02b15 	stw	r2,-32596(gp)
+                        alt_putstr("Let's Dance!\n");
+   1050c:	21041d04 	addi	r4,r4,4212
+   10510:	003fd806 	br	10474 <updatePBState+0xb4>
+                      alt_putstr("Keep Dancing!\n");
+   10514:	01000074 	movhi	r4,1
+                  pause = 1;
+   10518:	00800044 	movi	r2,1
+                      alt_putstr("Keep Dancing!\n");
+   1051c:	21042104 	addi	r4,r4,4228
+                  pause = 1;
+   10520:	d0a02415 	stw	r2,-32624(gp)
+                      dancing = 1;
+   10524:	d0a02515 	stw	r2,-32620(gp)
+                      alt_putstr("Keep Dancing!\n");
+   10528:	0010dc80 	call	10dc8 <alt_putstr>
+                      dance_dir = 0;
+   1052c:	d0202b15 	stw	zero,-32596(gp)
+                      break;
+   10530:	003fbe06 	br	1042c <updatePBState+0x6c>
+                      alt_putstr("Taking a nap...zzzz....\n");
+   10534:	01000074 	movhi	r4,1
+                      disp_off = 1;
+   10538:	00800044 	movi	r2,1
+                      alt_putstr("Taking a nap...zzzz....\n");
+   1053c:	21042504 	addi	r4,r4,4244
+                  pause = 0;
+   10540:	d0202415 	stw	zero,-32624(gp)
+                      disp_off = 1;
+   10544:	d0a02615 	stw	r2,-32616(gp)
+                      alt_putstr("Taking a nap...zzzz....\n");
+   10548:	0010dc80 	call	10dc8 <alt_putstr>
+                      flag = -1;
+   1054c:	00bfffc4 	movi	r2,-1
+   10550:	d0a02915 	stw	r2,-32604(gp)
+                      break;
+   10554:	003fb506 	br	1042c <updatePBState+0x6c>
+              toggle = 0; // So user doesn't continuously toggle
+   10558:	d0202d15 	stw	zero,-32588(gp)
+              speedup_toggle = 0;
+   1055c:	d0202e15 	stw	zero,-32584(gp)
+   10560:	003fb706 	br	10440 <updatePBState+0x80>
+
+00010564 <getBin>:
+	switch(letter){
+   10564:	213ff404 	addi	r4,r4,-48
+   10568:	21003fcc 	andi	r4,r4,255
+   1056c:	20800ae8 	cmpgeui	r2,r4,43
+   10570:	1000041e 	bne	r2,zero,10584 <getBin+0x20>
+   10574:	00800074 	movhi	r2,1
+   10578:	2085883a 	add	r2,r4,r2
+   1057c:	10842b47 	ldb	r2,4269(r2)
+   10580:	f800283a 	ret
+   10584:	00801fc4 	movi	r2,127
+}
+   10588:	f800283a 	ret
+
+0001058c <getBinaryLetter>:
+	int let = getBin(letter);
+   1058c:	21003fcc 	andi	r4,r4,255
+   10590:	2100201c 	xori	r4,r4,128
+int getBinaryLetter(char letter){
+   10594:	deffff04 	addi	sp,sp,-4
+	int let = getBin(letter);
+   10598:	213fe004 	addi	r4,r4,-128
+int getBinaryLetter(char letter){
+   1059c:	dfc00015 	stw	ra,0(sp)
+	int let = getBin(letter);
+   105a0:	00105640 	call	10564 <getBin>
+	if (upsideDown){
+   105a4:	d0e02f17 	ldw	r3,-32580(gp)
+   105a8:	18001226 	beq	r3,zero,105f4 <getBinaryLetter+0x68>
+		int letter_inv = ~let; //Inverting the binary makes the logic easier to deal with.
+   105ac:	0088303a 	nor	r4,zero,r2
+		int bit1 = (letter_inv & 0b0000010) << 1;
+   105b0:	200c907a 	slli	r6,r4,1
+		int bit0 = (letter_inv & 0b0000001) << 3;
+   105b4:	200690fa 	slli	r3,r4,3
+		int bit2 = (letter_inv & 0b0000100) >> 1;
+   105b8:	200bd07a 	srai	r5,r4,1
+		int bit1 = (letter_inv & 0b0000010) << 1;
+   105bc:	3080010c 	andi	r2,r6,4
+		int bit0 = (letter_inv & 0b0000001) << 3;
+   105c0:	18c0020c 	andi	r3,r3,8
+		int full_inv = (0b0000000) | bit0 | bit1 | bit2 | bit3 | bit4 | bit5 | bit6;
+   105c4:	1886b03a 	or	r3,r3,r2
+		int bit6 = (letter_inv & 0b1000000);
+   105c8:	2080100c 	andi	r2,r4,64
+		int full_inv = (0b0000000) | bit0 | bit1 | bit2 | bit3 | bit4 | bit5 | bit6;
+   105cc:	1886b03a 	or	r3,r3,r2
+		int bit2 = (letter_inv & 0b0000100) >> 1;
+   105d0:	2880008c 	andi	r2,r5,2
+		int full_inv = (0b0000000) | bit0 | bit1 | bit2 | bit3 | bit4 | bit5 | bit6;
+   105d4:	1886b03a 	or	r3,r3,r2
+		int bit3 = (letter_inv & 0b0001000) >> 3;
+   105d8:	2005d0fa 	srai	r2,r4,3
+		int bit4 = (letter_inv & 0b0010000) << 1;
+   105dc:	3180080c 	andi	r6,r6,32
+		int bit5 = (letter_inv & 0b0100000) >> 1;
+   105e0:	2900040c 	andi	r4,r5,16
+		int bit3 = (letter_inv & 0b0001000) >> 3;
+   105e4:	1080004c 	andi	r2,r2,1
+		int full_inv = (0b0000000) | bit0 | bit1 | bit2 | bit3 | bit4 | bit5 | bit6;
+   105e8:	1884b03a 	or	r2,r3,r2
+   105ec:	1184b03a 	or	r2,r2,r6
+		return ~full_inv; //Invert the logic back again
+   105f0:	1104303a 	nor	r2,r2,r4
+}
+   105f4:	dfc00017 	ldw	ra,0(sp)
+   105f8:	dec00104 	addi	sp,sp,4
+   105fc:	f800283a 	ret
+
+00010600 <getBinLowLow>:
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter; the inverting logic is easier to deal with
+   10600:	21003fcc 	andi	r4,r4,255
+   10604:	2100201c 	xori	r4,r4,128
+int getBinLowLow(char letter){
+   10608:	deffff04 	addi	sp,sp,-4
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter; the inverting logic is easier to deal with
+   1060c:	213fe004 	addi	r4,r4,-128
+int getBinLowLow(char letter){
+   10610:	dfc00015 	stw	ra,0(sp)
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter; the inverting logic is easier to deal with
+   10614:	001058c0 	call	1058c <getBinaryLetter>
+   10618:	0084303a 	nor	r2,zero,r2
+	int bit0 = (letter_inv & 0b0000001) << 3; //This logic deals with bit shifting so the letters appear higher on the display
+   1061c:	100490fa 	slli	r2,r2,3
+   10620:	1080020c 	andi	r2,r2,8
+}
+   10624:	0084303a 	nor	r2,zero,r2
+   10628:	dfc00017 	ldw	ra,0(sp)
+   1062c:	dec00104 	addi	sp,sp,4
+   10630:	f800283a 	ret
+
+00010634 <getBinLow>:
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter; inverting the binary makes the logic easier
+   10634:	21003fcc 	andi	r4,r4,255
+   10638:	2100201c 	xori	r4,r4,128
+int getBinLow(char letter){
+   1063c:	deffff04 	addi	sp,sp,-4
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter; inverting the binary makes the logic easier
+   10640:	213fe004 	addi	r4,r4,-128
+int getBinLow(char letter){
+   10644:	dfc00015 	stw	ra,0(sp)
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter; inverting the binary makes the logic easier
+   10648:	001058c0 	call	1058c <getBinaryLetter>
+   1064c:	0086303a 	nor	r3,zero,r2
+	int bit0 = (letter_inv & 0b0000001) << 6; //This logic deals with bit shifting so the letters appear higher on the display
+   10650:	180491ba 	slli	r2,r3,6
+	int bit1 = (letter_inv & 0b0000010) << 1;
+   10654:	1808907a 	slli	r4,r3,1
+	int bit0 = (letter_inv & 0b0000001) << 6; //This logic deals with bit shifting so the letters appear higher on the display
+   10658:	1080100c 	andi	r2,r2,64
+	int bit1 = (letter_inv & 0b0000010) << 1;
+   1065c:	2100010c 	andi	r4,r4,4
+	int res = (0b0000000) | bit0 | bit1 | bit5 | bit7;
+   10660:	1104b03a 	or	r2,r2,r4
+	int bit5 = (letter_inv & 0b0100000) >> 1;
+   10664:	1809d07a 	srai	r4,r3,1
+	int bit7 = (letter_inv & 0b1000000) >> 3;
+   10668:	1807d0fa 	srai	r3,r3,3
+	int bit5 = (letter_inv & 0b0100000) >> 1;
+   1066c:	2100040c 	andi	r4,r4,16
+	int res = (0b0000000) | bit0 | bit1 | bit5 | bit7;
+   10670:	1104b03a 	or	r2,r2,r4
+	int bit7 = (letter_inv & 0b1000000) >> 3;
+   10674:	18c0020c 	andi	r3,r3,8
+}
+   10678:	10c4303a 	nor	r2,r2,r3
+   1067c:	dfc00017 	ldw	ra,0(sp)
+   10680:	dec00104 	addi	sp,sp,4
+   10684:	f800283a 	ret
+
+00010688 <getBinHigh>:
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter, the logic is easier to work with inverted
+   10688:	21003fcc 	andi	r4,r4,255
+   1068c:	2100201c 	xori	r4,r4,128
+int getBinHigh(char letter){
+   10690:	deffff04 	addi	sp,sp,-4
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter, the logic is easier to work with inverted
+   10694:	213fe004 	addi	r4,r4,-128
+int getBinHigh(char letter){
+   10698:	dfc00015 	stw	ra,0(sp)
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter, the logic is easier to work with inverted
+   1069c:	001058c0 	call	1058c <getBinaryLetter>
+   106a0:	0086303a 	nor	r3,zero,r2
+	int bit2 = (letter_inv & 0b0000100) >> 1 ; //This logic deals with bit shifting so the letters appear higher on the display
+   106a4:	1805d07a 	srai	r2,r3,1
+	int bit3 = (letter_inv & 0b0001000) << 3;
+   106a8:	180890fa 	slli	r4,r3,3
+	int bit2 = (letter_inv & 0b0000100) >> 1 ; //This logic deals with bit shifting so the letters appear higher on the display
+   106ac:	1080008c 	andi	r2,r2,2
+	int bit3 = (letter_inv & 0b0001000) << 3;
+   106b0:	2100100c 	andi	r4,r4,64
+	int res = (0b0000000) | bit2 | bit3 | bit4 | bit6;
+   106b4:	1104b03a 	or	r2,r2,r4
+	int bit4 = (letter_inv & 0b0010000) << 1 ;
+   106b8:	1808907a 	slli	r4,r3,1
+	int bit6 = (letter_inv & 0b1000000) >> 6;
+   106bc:	1807d1ba 	srai	r3,r3,6
+	int bit4 = (letter_inv & 0b0010000) << 1 ;
+   106c0:	2100080c 	andi	r4,r4,32
+	int res = (0b0000000) | bit2 | bit3 | bit4 | bit6;
+   106c4:	1104b03a 	or	r2,r2,r4
+	int bit6 = (letter_inv & 0b1000000) >> 6;
+   106c8:	18c0004c 	andi	r3,r3,1
+}
+   106cc:	10c4303a 	nor	r2,r2,r3
+   106d0:	dfc00017 	ldw	ra,0(sp)
+   106d4:	dec00104 	addi	sp,sp,4
+   106d8:	f800283a 	ret
+
+000106dc <getBinHighHigh>:
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter, it is easier to deal with the inverted logic
+   106dc:	21003fcc 	andi	r4,r4,255
+   106e0:	2100201c 	xori	r4,r4,128
+int getBinHighHigh(char letter){
+   106e4:	deffff04 	addi	sp,sp,-4
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter, it is easier to deal with the inverted logic
+   106e8:	213fe004 	addi	r4,r4,-128
+int getBinHighHigh(char letter){
+   106ec:	dfc00015 	stw	ra,0(sp)
+	int letter_inv = ~getBinaryLetter(letter); //Get the integer representation of the letter, it is easier to deal with the inverted logic
+   106f0:	001058c0 	call	1058c <getBinaryLetter>
+   106f4:	0084303a 	nor	r2,zero,r2
+	int bit3 = (letter_inv & 0b0001000) >> 3; //This logic deals with bit shifting so the letters appear higher on the display
+   106f8:	1005d0fa 	srai	r2,r2,3
+   106fc:	1080004c 	andi	r2,r2,1
+}
+   10700:	0084303a 	nor	r2,zero,r2
+   10704:	dfc00017 	ldw	ra,0(sp)
+   10708:	dec00104 	addi	sp,sp,4
+   1070c:	f800283a 	ret
+
+00010710 <print>:
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, let5);
+   10710:	008000b4 	movhi	r2,2
+   10714:	11040435 	stwio	r4,4112(r2)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, let4);
+   10718:	11440835 	stwio	r5,4128(r2)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, let3);
+   1071c:	11840035 	stwio	r6,4096(r2)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, let2);
+   10720:	11c40c35 	stwio	r7,4144(r2)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, let1);
+   10724:	d8c00017 	ldw	r3,0(sp)
+   10728:	10c41035 	stwio	r3,4160(r2)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, let0);
+   1072c:	d8c00117 	ldw	r3,4(sp)
+   10730:	10c41435 	stwio	r3,4176(r2)
+	return;
+}
+   10734:	f800283a 	ret
+
+00010738 <print_letters>:
+//Prints each of the letters out to the screen; takes into account the dancing letters
+void print_letters(char let5, char let4, char let3, char let2, char let1, char let0, int state){
+	//If the display is "muted," don't show anything
+	if (disp_off){
+   10738:	d0e02617 	ldw	r3,-32616(gp)
+void print_letters(char let5, char let4, char let3, char let2, char let1, char let0, int state){
+   1073c:	defffa04 	addi	sp,sp,-24
+   10740:	dd000415 	stw	r20,16(sp)
+   10744:	dcc00315 	stw	r19,12(sp)
+   10748:	dfc00515 	stw	ra,20(sp)
+   1074c:	dc800215 	stw	r18,8(sp)
+   10750:	dc400115 	stw	r17,4(sp)
+   10754:	dc000015 	stw	r16,0(sp)
+   10758:	dd000617 	ldw	r20,24(sp)
+   1075c:	dcc00717 	ldw	r19,28(sp)
+   10760:	d8800817 	ldw	r2,32(sp)
+	if (disp_off){
+   10764:	18001026 	beq	r3,zero,107a8 <print_letters+0x70>
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, let5);
+   10768:	00801fc4 	movi	r2,127
+   1076c:	00c000b4 	movhi	r3,2
+   10770:	18840435 	stwio	r2,4112(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, let4);
+   10774:	18840835 	stwio	r2,4128(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, let3);
+   10778:	18840035 	stwio	r2,4096(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, let2);
+   1077c:	18840c35 	stwio	r2,4144(r3)
+	IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, let1);
+   10780:	18841035 	stwio	r2,4160(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, getBinHighHigh(let5));
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, getBinHighHigh(let4));
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, getBinHighHigh(let3));
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, getBinHighHigh(let2));
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, getBinHighHigh(let1));
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinHighHigh(let0));
+   10784:	18841435 	stwio	r2,4176(r3)
+		return;
+	}
+}
+   10788:	dfc00517 	ldw	ra,20(sp)
+   1078c:	dd000417 	ldw	r20,16(sp)
+   10790:	dcc00317 	ldw	r19,12(sp)
+   10794:	dc800217 	ldw	r18,8(sp)
+   10798:	dc400117 	ldw	r17,4(sp)
+   1079c:	dc000017 	ldw	r16,0(sp)
+   107a0:	dec00604 	addi	sp,sp,24
+   107a4:	f800283a 	ret
+   107a8:	21003fcc 	andi	r4,r4,255
+   107ac:	2c803fcc 	andi	r18,r5,255
+   107b0:	34403fcc 	andi	r17,r6,255
+   107b4:	3c003fcc 	andi	r16,r7,255
+   107b8:	a5003fcc 	andi	r20,r20,255
+   107bc:	9cc03fcc 	andi	r19,r19,255
+   107c0:	2100201c 	xori	r4,r4,128
+   107c4:	9480201c 	xori	r18,r18,128
+   107c8:	8c40201c 	xori	r17,r17,128
+   107cc:	8400201c 	xori	r16,r16,128
+   107d0:	a500201c 	xori	r20,r20,128
+   107d4:	9cc0201c 	xori	r19,r19,128
+	switch (state){
+   107d8:	10c00060 	cmpeqi	r3,r2,1
+   107dc:	213fe004 	addi	r4,r4,-128
+   107e0:	94bfe004 	addi	r18,r18,-128
+   107e4:	8c7fe004 	addi	r17,r17,-128
+   107e8:	843fe004 	addi	r16,r16,-128
+   107ec:	a53fe004 	addi	r20,r20,-128
+   107f0:	9cffe004 	addi	r19,r19,-128
+   107f4:	18004a1e 	bne	r3,zero,10920 <print_letters+0x1e8>
+   107f8:	10c00088 	cmpgei	r3,r2,2
+   107fc:	1800171e 	bne	r3,zero,1085c <print_letters+0x124>
+   10800:	10003026 	beq	r2,zero,108c4 <print_letters+0x18c>
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, getBinHighHigh(let5));
+   10804:	00106dc0 	call	106dc <getBinHighHigh>
+   10808:	00c000b4 	movhi	r3,2
+   1080c:	18840435 	stwio	r2,4112(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, getBinHighHigh(let4));
+   10810:	9009883a 	mov	r4,r18
+   10814:	00106dc0 	call	106dc <getBinHighHigh>
+   10818:	00c000b4 	movhi	r3,2
+   1081c:	18840835 	stwio	r2,4128(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, getBinHighHigh(let3));
+   10820:	8809883a 	mov	r4,r17
+   10824:	00106dc0 	call	106dc <getBinHighHigh>
+   10828:	00c000b4 	movhi	r3,2
+   1082c:	18840035 	stwio	r2,4096(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, getBinHighHigh(let2));
+   10830:	8009883a 	mov	r4,r16
+   10834:	00106dc0 	call	106dc <getBinHighHigh>
+   10838:	00c000b4 	movhi	r3,2
+   1083c:	18840c35 	stwio	r2,4144(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, getBinHighHigh(let1));
+   10840:	a009883a 	mov	r4,r20
+   10844:	00106dc0 	call	106dc <getBinHighHigh>
+   10848:	00c000b4 	movhi	r3,2
+   1084c:	18841035 	stwio	r2,4160(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinHighHigh(let0));
+   10850:	9809883a 	mov	r4,r19
+   10854:	00106dc0 	call	106dc <getBinHighHigh>
+   10858:	00002f06 	br	10918 <print_letters+0x1e0>
+	switch (state){
+   1085c:	10c000a0 	cmpeqi	r3,r2,2
+   10860:	1800451e 	bne	r3,zero,10978 <print_letters+0x240>
+   10864:	108000e0 	cmpeqi	r2,r2,3
+   10868:	103fe626 	beq	r2,zero,10804 <print_letters+0xcc>
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, getBinHigh(let5));
+   1086c:	00106880 	call	10688 <getBinHigh>
+   10870:	00c000b4 	movhi	r3,2
+   10874:	18840435 	stwio	r2,4112(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, getBinHigh(let4));
+   10878:	9009883a 	mov	r4,r18
+   1087c:	00106880 	call	10688 <getBinHigh>
+   10880:	00c000b4 	movhi	r3,2
+   10884:	18840835 	stwio	r2,4128(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, getBinHigh(let3));
+   10888:	8809883a 	mov	r4,r17
+   1088c:	00106880 	call	10688 <getBinHigh>
+   10890:	00c000b4 	movhi	r3,2
+   10894:	18840035 	stwio	r2,4096(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, getBinHigh(let2));
+   10898:	8009883a 	mov	r4,r16
+   1089c:	00106880 	call	10688 <getBinHigh>
+   108a0:	00c000b4 	movhi	r3,2
+   108a4:	18840c35 	stwio	r2,4144(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, getBinHigh(let1));
+   108a8:	a009883a 	mov	r4,r20
+   108ac:	00106880 	call	10688 <getBinHigh>
+   108b0:	00c000b4 	movhi	r3,2
+   108b4:	18841035 	stwio	r2,4160(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinHigh(let0));
+   108b8:	9809883a 	mov	r4,r19
+   108bc:	00106880 	call	10688 <getBinHigh>
+   108c0:	00001506 	br	10918 <print_letters+0x1e0>
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, getBinLowLow(let5));
+   108c4:	00106000 	call	10600 <getBinLowLow>
+   108c8:	00c000b4 	movhi	r3,2
+   108cc:	18840435 	stwio	r2,4112(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, getBinLowLow(let4));
+   108d0:	9009883a 	mov	r4,r18
+   108d4:	00106000 	call	10600 <getBinLowLow>
+   108d8:	00c000b4 	movhi	r3,2
+   108dc:	18840835 	stwio	r2,4128(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, getBinLowLow(let3));
+   108e0:	8809883a 	mov	r4,r17
+   108e4:	00106000 	call	10600 <getBinLowLow>
+   108e8:	00c000b4 	movhi	r3,2
+   108ec:	18840035 	stwio	r2,4096(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, getBinLowLow(let2));
+   108f0:	8009883a 	mov	r4,r16
+   108f4:	00106000 	call	10600 <getBinLowLow>
+   108f8:	00c000b4 	movhi	r3,2
+   108fc:	18840c35 	stwio	r2,4144(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, getBinLowLow(let1));
+   10900:	a009883a 	mov	r4,r20
+   10904:	00106000 	call	10600 <getBinLowLow>
+   10908:	00c000b4 	movhi	r3,2
+   1090c:	18841035 	stwio	r2,4160(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinLowLow(let0));
+   10910:	9809883a 	mov	r4,r19
+   10914:	00106000 	call	10600 <getBinLowLow>
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinHighHigh(let0));
+   10918:	00c000b4 	movhi	r3,2
+   1091c:	003f9906 	br	10784 <print_letters+0x4c>
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, getBinLow(let5));
+   10920:	00106340 	call	10634 <getBinLow>
+   10924:	00c000b4 	movhi	r3,2
+   10928:	18840435 	stwio	r2,4112(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, getBinLow(let4));
+   1092c:	9009883a 	mov	r4,r18
+   10930:	00106340 	call	10634 <getBinLow>
+   10934:	00c000b4 	movhi	r3,2
+   10938:	18840835 	stwio	r2,4128(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, getBinLow(let3));
+   1093c:	8809883a 	mov	r4,r17
+   10940:	00106340 	call	10634 <getBinLow>
+   10944:	00c000b4 	movhi	r3,2
+   10948:	18840035 	stwio	r2,4096(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, getBinLow(let2));
+   1094c:	8009883a 	mov	r4,r16
+   10950:	00106340 	call	10634 <getBinLow>
+   10954:	00c000b4 	movhi	r3,2
+   10958:	18840c35 	stwio	r2,4144(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, getBinLow(let1));
+   1095c:	a009883a 	mov	r4,r20
+   10960:	00106340 	call	10634 <getBinLow>
+   10964:	00c000b4 	movhi	r3,2
+   10968:	18841035 	stwio	r2,4160(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinLow(let0));
+   1096c:	9809883a 	mov	r4,r19
+   10970:	00106340 	call	10634 <getBinLow>
+   10974:	003fe806 	br	10918 <print_letters+0x1e0>
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX5_BASE, getBinaryLetter(let5));
+   10978:	001058c0 	call	1058c <getBinaryLetter>
+   1097c:	00c000b4 	movhi	r3,2
+   10980:	18840435 	stwio	r2,4112(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX4_BASE, getBinaryLetter(let4));
+   10984:	9009883a 	mov	r4,r18
+   10988:	001058c0 	call	1058c <getBinaryLetter>
+   1098c:	00c000b4 	movhi	r3,2
+   10990:	18840835 	stwio	r2,4128(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX3_BASE, getBinaryLetter(let3));
+   10994:	8809883a 	mov	r4,r17
+   10998:	001058c0 	call	1058c <getBinaryLetter>
+   1099c:	00c000b4 	movhi	r3,2
+   109a0:	18840035 	stwio	r2,4096(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX2_BASE, getBinaryLetter(let2));
+   109a4:	8009883a 	mov	r4,r16
+   109a8:	001058c0 	call	1058c <getBinaryLetter>
+   109ac:	00c000b4 	movhi	r3,2
+   109b0:	18840c35 	stwio	r2,4144(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX1_BASE, getBinaryLetter(let1));
+   109b4:	a009883a 	mov	r4,r20
+   109b8:	001058c0 	call	1058c <getBinaryLetter>
+   109bc:	00c000b4 	movhi	r3,2
+   109c0:	18841035 	stwio	r2,4160(r3)
+		IOWR_ALTERA_AVALON_PIO_DATA(HEX0_BASE, getBinaryLetter(let0));
+   109c4:	9809883a 	mov	r4,r19
+   109c8:	001058c0 	call	1058c <getBinaryLetter>
+   109cc:	003fd206 	br	10918 <print_letters+0x1e0>
+
+000109d0 <main>:
+int main(){
+   109d0:	defff604 	addi	sp,sp,-40
+  int switch_datain = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE);	//Read the data from the switches
+   109d4:	008000b4 	movhi	r2,2
+int main(){
+   109d8:	dfc00915 	stw	ra,36(sp)
+   109dc:	dd400815 	stw	r21,32(sp)
+   109e0:	dd000715 	stw	r20,28(sp)
+   109e4:	dcc00615 	stw	r19,24(sp)
+   109e8:	dc800515 	stw	r18,20(sp)
+   109ec:	dc400415 	stw	r17,16(sp)
+   109f0:	dc000315 	stw	r16,12(sp)
+  int switch_datain = IORD_ALTERA_AVALON_PIO_DATA(SWITCH_BASE);	//Read the data from the switches
+   109f4:	10841c37 	ldwio	r2,4208(r2)
+   print_letters(text[(location % length)], text[(location + 1) % length], text[(location + 2) % length], text[(location + 3) % length], text[(location + 4) % length], text[(location + 5) % length], dance_state);
+   109f8:	04000074 	movhi	r16,1
+  initializeDisplay();
+   109fc:	00102240 	call	10224 <initializeDisplay>
+  int location = 0; //Keeps track of where we are in the display, used for scrolling the text
+   10a00:	0023883a 	mov	r17,zero
+   print_letters(text[(location % length)], text[(location + 1) % length], text[(location + 2) % length], text[(location + 3) % length], text[(location + 4) % length], text[(location + 5) % length], dance_state);
+   10a04:	84048404 	addi	r16,r16,4624
+	  for(int i = 0; i< timer; i++){
+   10a08:	0025883a 	mov	r18,zero
+   10a0c:	d0a00017 	ldw	r2,-32768(gp)
+   10a10:	90803216 	blt	r18,r2,10adc <main+0x10c>
+	  updateText();		//Decides whether the user has put in a request to update the text on the display, and handle accordingly
+   10a14:	00101840 	call	10184 <updateText>
+	  timer = updateTimer(timer, speedup_toggle, slowdown_toggle);	//Deal with speeding up or slowing down the display
+   10a18:	d1a02c17 	ldw	r6,-32592(gp)
+   10a1c:	d1200017 	ldw	r4,-32768(gp)
+   10a20:	d1602e17 	ldw	r5,-32584(gp)
+   10a24:	00102e40 	call	102e4 <updateTimer>
+	  location = updateLocation(location, length);  //The amount we should shift each letter by based on the user input
+   10a28:	d1602a17 	ldw	r5,-32600(gp)
+   10a2c:	8809883a 	mov	r4,r17
+	  timer = updateTimer(timer, speedup_toggle, slowdown_toggle);	//Deal with speeding up or slowing down the display
+   10a30:	d0a00015 	stw	r2,-32768(gp)
+	  location = updateLocation(location, length);  //The amount we should shift each letter by based on the user input
+   10a34:	00103080 	call	10308 <updateLocation>
+   print_letters(text[(location % length)], text[(location + 1) % length], text[(location + 2) % length], text[(location + 3) % length], text[(location + 4) % length], text[(location + 5) % length], dance_state);
+   10a38:	d1602a17 	ldw	r5,-32600(gp)
+   10a3c:	110000c4 	addi	r4,r2,3
+	  location = updateLocation(location, length);  //The amount we should shift each letter by based on the user input
+   10a40:	1023883a 	mov	r17,r2
+   print_letters(text[(location % length)], text[(location + 1) % length], text[(location + 2) % length], text[(location + 3) % length], text[(location + 4) % length], text[(location + 5) % length], dance_state);
+   10a44:	0010b700 	call	10b70 <__modsi3>
+   10a48:	d1602a17 	ldw	r5,-32600(gp)
+   10a4c:	8085883a 	add	r2,r16,r2
+   10a50:	89000084 	addi	r4,r17,2
+   10a54:	15400007 	ldb	r21,0(r2)
+   10a58:	0010b700 	call	10b70 <__modsi3>
+   10a5c:	d1602a17 	ldw	r5,-32600(gp)
+   10a60:	8085883a 	add	r2,r16,r2
+   10a64:	89000044 	addi	r4,r17,1
+   10a68:	15000007 	ldb	r20,0(r2)
+   10a6c:	0010b700 	call	10b70 <__modsi3>
+   10a70:	d1602a17 	ldw	r5,-32600(gp)
+   10a74:	8085883a 	add	r2,r16,r2
+   10a78:	8809883a 	mov	r4,r17
+   10a7c:	14c00007 	ldb	r19,0(r2)
+   10a80:	0010b700 	call	10b70 <__modsi3>
+   10a84:	8085883a 	add	r2,r16,r2
+   10a88:	14800007 	ldb	r18,0(r2)
+   10a8c:	d1602a17 	ldw	r5,-32600(gp)
+   10a90:	d0a03017 	ldw	r2,-32576(gp)
+   10a94:	89000144 	addi	r4,r17,5
+   10a98:	d8800215 	stw	r2,8(sp)
+   10a9c:	0010b700 	call	10b70 <__modsi3>
+   10aa0:	8085883a 	add	r2,r16,r2
+   10aa4:	10800007 	ldb	r2,0(r2)
+   10aa8:	d1602a17 	ldw	r5,-32600(gp)
+   10aac:	89000104 	addi	r4,r17,4
+   10ab0:	d8800115 	stw	r2,4(sp)
+   10ab4:	0010b700 	call	10b70 <__modsi3>
+   10ab8:	8085883a 	add	r2,r16,r2
+   10abc:	10800007 	ldb	r2,0(r2)
+   10ac0:	a80f883a 	mov	r7,r21
+   10ac4:	a00d883a 	mov	r6,r20
+   10ac8:	d8800015 	stw	r2,0(sp)
+   10acc:	980b883a 	mov	r5,r19
+   10ad0:	9009883a 	mov	r4,r18
+   10ad4:	00107380 	call	10738 <print_letters>
+	  for(int i = 0; i< timer; i++){
+   10ad8:	003fcb06 	br	10a08 <main+0x38>
+		  updatePBState(button_datain);	//Apply the user's button input to change the logic of the display
+   10adc:	008000b4 	movhi	r2,2
+   10ae0:	11042037 	ldwio	r4,4224(r2)
+   10ae4:	00103c00 	call	103c0 <updatePBState>
+	  for(int i = 0; i< timer; i++){
+   10ae8:	94800044 	addi	r18,r18,1
+   10aec:	003fc706 	br	10a0c <main+0x3c>
+
+00010af0 <__divsi3>:
+   10af0:	20001a16 	blt	r4,zero,10b5c <__divsi3+0x6c>
+   10af4:	000f883a 	mov	r7,zero
+   10af8:	2800020e 	bge	r5,zero,10b04 <__divsi3+0x14>
+   10afc:	014bc83a 	sub	r5,zero,r5
+   10b00:	39c0005c 	xori	r7,r7,1
+   10b04:	200d883a 	mov	r6,r4
+   10b08:	00c00044 	movi	r3,1
+   10b0c:	2900092e 	bgeu	r5,r4,10b34 <__divsi3+0x44>
+   10b10:	00800804 	movi	r2,32
+   10b14:	00c00044 	movi	r3,1
+   10b18:	00000106 	br	10b20 <__divsi3+0x30>
+   10b1c:	10001226 	beq	r2,zero,10b68 <__divsi3+0x78>
+   10b20:	294b883a 	add	r5,r5,r5
+   10b24:	10bfffc4 	addi	r2,r2,-1
+   10b28:	18c7883a 	add	r3,r3,r3
+   10b2c:	293ffb36 	bltu	r5,r4,10b1c <__divsi3+0x2c>
+   10b30:	18000d26 	beq	r3,zero,10b68 <__divsi3+0x78>
+   10b34:	0005883a 	mov	r2,zero
+   10b38:	31400236 	bltu	r6,r5,10b44 <__divsi3+0x54>
+   10b3c:	314dc83a 	sub	r6,r6,r5
+   10b40:	10c4b03a 	or	r2,r2,r3
+   10b44:	1806d07a 	srli	r3,r3,1
+   10b48:	280ad07a 	srli	r5,r5,1
+   10b4c:	183ffa1e 	bne	r3,zero,10b38 <__divsi3+0x48>
+   10b50:	38000126 	beq	r7,zero,10b58 <__divsi3+0x68>
+   10b54:	0085c83a 	sub	r2,zero,r2
+   10b58:	f800283a 	ret
+   10b5c:	0109c83a 	sub	r4,zero,r4
+   10b60:	01c00044 	movi	r7,1
+   10b64:	003fe406 	br	10af8 <__divsi3+0x8>
+   10b68:	0005883a 	mov	r2,zero
+   10b6c:	003ff806 	br	10b50 <__divsi3+0x60>
+
+00010b70 <__modsi3>:
+   10b70:	20001a16 	blt	r4,zero,10bdc <__modsi3+0x6c>
+   10b74:	000f883a 	mov	r7,zero
+   10b78:	2005883a 	mov	r2,r4
+   10b7c:	2800010e 	bge	r5,zero,10b84 <__modsi3+0x14>
+   10b80:	014bc83a 	sub	r5,zero,r5
+   10b84:	00c00044 	movi	r3,1
+   10b88:	2900092e 	bgeu	r5,r4,10bb0 <__modsi3+0x40>
+   10b8c:	01800804 	movi	r6,32
+   10b90:	00c00044 	movi	r3,1
+   10b94:	00000106 	br	10b9c <__modsi3+0x2c>
+   10b98:	30000d26 	beq	r6,zero,10bd0 <__modsi3+0x60>
+   10b9c:	294b883a 	add	r5,r5,r5
+   10ba0:	31bfffc4 	addi	r6,r6,-1
+   10ba4:	18c7883a 	add	r3,r3,r3
+   10ba8:	293ffb36 	bltu	r5,r4,10b98 <__modsi3+0x28>
+   10bac:	18000826 	beq	r3,zero,10bd0 <__modsi3+0x60>
+   10bb0:	1806d07a 	srli	r3,r3,1
+   10bb4:	11400136 	bltu	r2,r5,10bbc <__modsi3+0x4c>
+   10bb8:	1145c83a 	sub	r2,r2,r5
+   10bbc:	280ad07a 	srli	r5,r5,1
+   10bc0:	183ffb1e 	bne	r3,zero,10bb0 <__modsi3+0x40>
+   10bc4:	38000126 	beq	r7,zero,10bcc <__modsi3+0x5c>
+   10bc8:	0085c83a 	sub	r2,zero,r2
+   10bcc:	f800283a 	ret
+   10bd0:	2005883a 	mov	r2,r4
+   10bd4:	383ffd26 	beq	r7,zero,10bcc <__modsi3+0x5c>
+   10bd8:	003ffb06 	br	10bc8 <__modsi3+0x58>
+   10bdc:	0109c83a 	sub	r4,zero,r4
+   10be0:	01c00044 	movi	r7,1
+   10be4:	003fe406 	br	10b78 <__modsi3+0x8>
+
+00010be8 <__udivsi3>:
+   10be8:	200d883a 	mov	r6,r4
+   10bec:	2900152e 	bgeu	r5,r4,10c44 <__udivsi3+0x5c>
+   10bf0:	28001416 	blt	r5,zero,10c44 <__udivsi3+0x5c>
+   10bf4:	00800804 	movi	r2,32
+   10bf8:	00c00044 	movi	r3,1
+   10bfc:	00000206 	br	10c08 <__udivsi3+0x20>
+   10c00:	10000e26 	beq	r2,zero,10c3c <__udivsi3+0x54>
+   10c04:	28000516 	blt	r5,zero,10c1c <__udivsi3+0x34>
+   10c08:	294b883a 	add	r5,r5,r5
+   10c0c:	10bfffc4 	addi	r2,r2,-1
+   10c10:	18c7883a 	add	r3,r3,r3
+   10c14:	293ffa36 	bltu	r5,r4,10c00 <__udivsi3+0x18>
+   10c18:	18000826 	beq	r3,zero,10c3c <__udivsi3+0x54>
+   10c1c:	0005883a 	mov	r2,zero
+   10c20:	31400236 	bltu	r6,r5,10c2c <__udivsi3+0x44>
+   10c24:	314dc83a 	sub	r6,r6,r5
+   10c28:	10c4b03a 	or	r2,r2,r3
+   10c2c:	1806d07a 	srli	r3,r3,1
+   10c30:	280ad07a 	srli	r5,r5,1
+   10c34:	183ffa1e 	bne	r3,zero,10c20 <__udivsi3+0x38>
+   10c38:	f800283a 	ret
+   10c3c:	0005883a 	mov	r2,zero
+   10c40:	f800283a 	ret
+   10c44:	00c00044 	movi	r3,1
+   10c48:	003ff406 	br	10c1c <__udivsi3+0x34>
+
+00010c4c <__umodsi3>:
+   10c4c:	2005883a 	mov	r2,r4
+   10c50:	2900132e 	bgeu	r5,r4,10ca0 <__umodsi3+0x54>
+   10c54:	28001216 	blt	r5,zero,10ca0 <__umodsi3+0x54>
+   10c58:	01800804 	movi	r6,32
+   10c5c:	00c00044 	movi	r3,1
+   10c60:	00000206 	br	10c6c <__umodsi3+0x20>
+   10c64:	30000c26 	beq	r6,zero,10c98 <__umodsi3+0x4c>
+   10c68:	28000516 	blt	r5,zero,10c80 <__umodsi3+0x34>
+   10c6c:	294b883a 	add	r5,r5,r5
+   10c70:	31bfffc4 	addi	r6,r6,-1
+   10c74:	18c7883a 	add	r3,r3,r3
+   10c78:	293ffa36 	bltu	r5,r4,10c64 <__umodsi3+0x18>
+   10c7c:	18000626 	beq	r3,zero,10c98 <__umodsi3+0x4c>
+   10c80:	1806d07a 	srli	r3,r3,1
+   10c84:	11400136 	bltu	r2,r5,10c8c <__umodsi3+0x40>
+   10c88:	1145c83a 	sub	r2,r2,r5
+   10c8c:	280ad07a 	srli	r5,r5,1
+   10c90:	183ffb1e 	bne	r3,zero,10c80 <__umodsi3+0x34>
+   10c94:	f800283a 	ret
+   10c98:	2005883a 	mov	r2,r4
+   10c9c:	f800283a 	ret
+   10ca0:	00c00044 	movi	r3,1
+   10ca4:	003ff606 	br	10c80 <__umodsi3+0x34>
+
+00010ca8 <alt_getchar>:
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_READ_EXTERNS(ALT_STDIN_DEV);
+    char c;
+
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+   10ca8:	00800074 	movhi	r2,1
+   10cac:	11c43b17 	ldw	r7,4332(r2)
+{
+   10cb0:	defffe04 	addi	sp,sp,-8
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+   10cb4:	01000074 	movhi	r4,1
+   10cb8:	01800044 	movi	r6,1
+   10cbc:	d94000c4 	addi	r5,sp,3
+   10cc0:	21045004 	addi	r4,r4,4416
+{
+   10cc4:	dfc00115 	stw	ra,4(sp)
+    if (ALT_DRIVER_READ(ALT_STDIN_DEV, &c, 1, alt_fd_list[STDIN_FILENO].fd_flags) <= 0) {
+   10cc8:	0010e240 	call	10e24 <altera_avalon_jtag_uart_read>
+   10ccc:	0080040e 	bge	zero,r2,10ce0 <alt_getchar+0x38>
+        return -1;
+    }
+    return c;
+   10cd0:	d88000c7 	ldb	r2,3(sp)
+#else
+    return getchar();
+#endif
+#endif
+}
+   10cd4:	dfc00117 	ldw	ra,4(sp)
+   10cd8:	dec00204 	addi	sp,sp,8
+   10cdc:	f800283a 	ret
+        return -1;
+   10ce0:	00bfffc4 	movi	r2,-1
+   10ce4:	003ffb06 	br	10cd4 <alt_getchar+0x2c>
+
+00010ce8 <alt_load>:
+ * there is no bootloader, so this application is responsible for loading to
+ * RAM any sections that are required.
+ */  
+
+void alt_load (void)
+{
+   10ce8:	deffff04 	addi	sp,sp,-4
+
+static void ALT_INLINE alt_load_section (alt_u32* from, 
+                                         alt_u32* to, 
+                                         alt_u32* end)
+{
+  if (to != from)
+   10cec:	00800074 	movhi	r2,1
+   10cf0:	00c00074 	movhi	r3,1
+   10cf4:	dfc00015 	stw	ra,0(sp)
+   10cf8:	10843904 	addi	r2,r2,4324
+   10cfc:	18c45604 	addi	r3,r3,4440
+   10d00:	10c00326 	beq	r2,r3,10d10 <alt_load+0x28>
+  {
+    while( to != end )
+   10d04:	01000074 	movhi	r4,1
+   10d08:	21045604 	addi	r4,r4,4440
+   10d0c:	1100141e 	bne	r2,r4,10d60 <alt_load+0x78>
+  if (to != from)
+   10d10:	00800074 	movhi	r2,1
+   10d14:	00c00074 	movhi	r3,1
+   10d18:	10800804 	addi	r2,r2,32
+   10d1c:	18c00804 	addi	r3,r3,32
+   10d20:	10c00326 	beq	r2,r3,10d30 <alt_load+0x48>
+    while( to != end )
+   10d24:	01000074 	movhi	r4,1
+   10d28:	21000804 	addi	r4,r4,32
+   10d2c:	1100111e 	bne	r2,r4,10d74 <alt_load+0x8c>
+  if (to != from)
+   10d30:	00800074 	movhi	r2,1
+   10d34:	00c00074 	movhi	r3,1
+   10d38:	1083b804 	addi	r2,r2,3808
+   10d3c:	18c3b804 	addi	r3,r3,3808
+   10d40:	10c00326 	beq	r2,r3,10d50 <alt_load+0x68>
+    while( to != end )
+   10d44:	01000074 	movhi	r4,1
+   10d48:	21043904 	addi	r4,r4,4324
+   10d4c:	11000e1e 	bne	r2,r4,10d88 <alt_load+0xa0>
+  
+  /*
+   * Now ensure that the caches are in synch.
+   */
+  
+  alt_dcache_flush_all();
+   10d50:	0010eac0 	call	10eac <alt_dcache_flush_all>
+  alt_icache_flush_all();
+}
+   10d54:	dfc00017 	ldw	ra,0(sp)
+   10d58:	dec00104 	addi	sp,sp,4
+  alt_icache_flush_all();
+   10d5c:	0010eb81 	jmpi	10eb8 <alt_icache_flush_all>
+    {
+      *to++ = *from++;
+   10d60:	19400017 	ldw	r5,0(r3)
+   10d64:	10800104 	addi	r2,r2,4
+   10d68:	18c00104 	addi	r3,r3,4
+   10d6c:	117fff15 	stw	r5,-4(r2)
+   10d70:	003fe606 	br	10d0c <alt_load+0x24>
+   10d74:	19400017 	ldw	r5,0(r3)
+   10d78:	10800104 	addi	r2,r2,4
+   10d7c:	18c00104 	addi	r3,r3,4
+   10d80:	117fff15 	stw	r5,-4(r2)
+   10d84:	003fe906 	br	10d2c <alt_load+0x44>
+   10d88:	19400017 	ldw	r5,0(r3)
+   10d8c:	10800104 	addi	r2,r2,4
+   10d90:	18c00104 	addi	r3,r3,4
+   10d94:	117fff15 	stw	r5,-4(r2)
+   10d98:	003fec06 	br	10d4c <alt_load+0x64>
+
+00010d9c <alt_main>:
+ * devices/filesystems/components in the system; and call the entry point for
+ * the users application, i.e. main().
+ */
+
+void alt_main (void)
+{
+   10d9c:	deffff04 	addi	sp,sp,-4
+#endif
+
+  /* ALT LOG - please see HAL/sys/alt_log_printf.h for details */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Entering alt_main, calling alt_irq_init.\r\n");
+  /* Initialize the interrupt controller. */
+  alt_irq_init (NULL);
+   10da0:	0009883a 	mov	r4,zero
+{
+   10da4:	dfc00015 	stw	ra,0(sp)
+  alt_irq_init (NULL);
+   10da8:	0010e000 	call	10e00 <alt_irq_init>
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Done OS Init, calling alt_sem_create.\r\n");
+  ALT_SEM_CREATE (&alt_fd_list_lock, 1);
+
+  /* Initialize the device drivers/software components. */
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling alt_sys_init.\r\n");
+  alt_sys_init();
+   10dac:	0010e200 	call	10e20 <alt_sys_init>
+   */
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] Calling main.\r\n");
+
+#ifdef ALT_NO_EXIT
+  main (alt_argc, alt_argv, alt_envp);
+   10db0:	d1a03217 	ldw	r6,-32568(gp)
+   10db4:	d1603317 	ldw	r5,-32564(gp)
+   10db8:	d1203417 	ldw	r4,-32560(gp)
+  close(STDOUT_FILENO);
+  exit (result);
+#endif
+
+  ALT_LOG_PRINT_BOOT("[alt_main.c] After main - we should not be here?.\r\n");
+}
+   10dbc:	dfc00017 	ldw	ra,0(sp)
+   10dc0:	dec00104 	addi	sp,sp,4
+  main (alt_argc, alt_argv, alt_envp);
+   10dc4:	00109d01 	jmpi	109d0 <main>
+
+00010dc8 <alt_putstr>:
+ * Uses the ALT_DRIVER_WRITE() macro to call directly to driver if available.
+ * Otherwise, uses newlib provided fputs() routine.
+ */
+int 
+alt_putstr(const char* str)
+{
+   10dc8:	defffe04 	addi	sp,sp,-8
+   10dcc:	dc000015 	stw	r16,0(sp)
+   10dd0:	dfc00115 	stw	ra,4(sp)
+   10dd4:	2021883a 	mov	r16,r4
+#ifdef ALT_SEMIHOSTING
+    return write(STDOUT_FILENO,str,strlen(str));
+#else
+#ifdef ALT_USE_DIRECT_DRIVERS
+    ALT_DRIVER_WRITE_EXTERNS(ALT_STDOUT_DEV);
+    return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, str, strlen(str), 0);
+   10dd8:	0010ec40 	call	10ec4 <strlen>
+   10ddc:	01000074 	movhi	r4,1
+   10de0:	000f883a 	mov	r7,zero
+   10de4:	100d883a 	mov	r6,r2
+   10de8:	800b883a 	mov	r5,r16
+   10dec:	21045004 	addi	r4,r4,4416
+#else
+    return fputs(str, stdout);
+#endif
+#endif
+}
+   10df0:	dfc00117 	ldw	ra,4(sp)
+   10df4:	dc000017 	ldw	r16,0(sp)
+   10df8:	dec00204 	addi	sp,sp,8
+    return ALT_DRIVER_WRITE(ALT_STDOUT_DEV, str, strlen(str), 0);
+   10dfc:	0010e7c1 	jmpi	10e7c <altera_avalon_jtag_uart_write>
+
+00010e00 <alt_irq_init>:
+ * The "base" parameter is ignored and only
+ * present for backwards-compatibility.
+ */
+
+void alt_irq_init ( const void* base )
+{
+   10e00:	deffff04 	addi	sp,sp,-4
+   10e04:	dfc00015 	stw	ra,0(sp)
+    ALTERA_NIOS2_GEN2_IRQ_INIT ( CPU, cpu);
+   10e08:	0010ebc0 	call	10ebc <altera_nios2_gen2_irq_init>
+ * alt_irq_cpu_enable_interrupts() enables the CPU to start taking interrupts.
+ */
+static ALT_INLINE void ALT_ALWAYS_INLINE 
+       alt_irq_cpu_enable_interrupts (void)
+{
+    NIOS2_WRITE_STATUS(NIOS2_STATUS_PIE_MSK
+   10e0c:	00800044 	movi	r2,1
+   10e10:	1001703a 	wrctl	status,r2
+    alt_irq_cpu_enable_interrupts();
+}
+   10e14:	dfc00017 	ldw	ra,0(sp)
+   10e18:	dec00104 	addi	sp,sp,4
+   10e1c:	f800283a 	ret
+
+00010e20 <alt_sys_init>:
+ */
+
+void alt_sys_init( void )
+{
+    ALTERA_AVALON_JTAG_UART_INIT ( JTAG_UART, jtag_uart);
+}
+   10e20:	f800283a 	ret
+
+00010e24 <altera_avalon_jtag_uart_read>:
+
+int 
+altera_avalon_jtag_uart_read(altera_avalon_jtag_uart_state* sp, 
+  char* buffer, int space, int flags)
+{
+  unsigned int base = sp->base;
+   10e24:	21000017 	ldw	r4,0(r4)
+
+  char * ptr = buffer;
+  char * end = buffer + space;
+   10e28:	298d883a 	add	r6,r5,r6
+
+  while (ptr < end)
+   10e2c:	2805883a 	mov	r2,r5
+
+    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
+      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
+    else if (ptr != buffer)
+      break;
+    else if(flags & O_NONBLOCK)
+   10e30:	3a10000c 	andi	r8,r7,16384
+  while (ptr < end)
+   10e34:	11800536 	bltu	r2,r6,10e4c <altera_avalon_jtag_uart_read+0x28>
+      break;   
+    
+  }
+
+  if (ptr != buffer)
+   10e38:	11400b1e 	bne	r2,r5,10e68 <altera_avalon_jtag_uart_read+0x44>
+    return ptr - buffer;
+  else if (flags & O_NONBLOCK)
+   10e3c:	39d0000c 	andi	r7,r7,16384
+   10e40:	38000c1e 	bne	r7,zero,10e74 <altera_avalon_jtag_uart_read+0x50>
+    return -EWOULDBLOCK;
+  else
+    return -EIO;
+   10e44:	00bffec4 	movi	r2,-5
+}
+   10e48:	f800283a 	ret
+    unsigned int data = IORD_ALTERA_AVALON_JTAG_UART_DATA(base);
+   10e4c:	20c00037 	ldwio	r3,0(r4)
+    if (data & ALTERA_AVALON_JTAG_UART_DATA_RVALID_MSK)
+   10e50:	1a60000c 	andi	r9,r3,32768
+   10e54:	48000326 	beq	r9,zero,10e64 <altera_avalon_jtag_uart_read+0x40>
+      *ptr++ = (data & ALTERA_AVALON_JTAG_UART_DATA_DATA_MSK) >> ALTERA_AVALON_JTAG_UART_DATA_DATA_OFST;
+   10e58:	10c00005 	stb	r3,0(r2)
+   10e5c:	10800044 	addi	r2,r2,1
+   10e60:	003ff406 	br	10e34 <altera_avalon_jtag_uart_read+0x10>
+    else if (ptr != buffer)
+   10e64:	11400226 	beq	r2,r5,10e70 <altera_avalon_jtag_uart_read+0x4c>
+    return ptr - buffer;
+   10e68:	1145c83a 	sub	r2,r2,r5
+   10e6c:	f800283a 	ret
+    else if(flags & O_NONBLOCK)
+   10e70:	403ff026 	beq	r8,zero,10e34 <altera_avalon_jtag_uart_read+0x10>
+    return -EWOULDBLOCK;
+   10e74:	00bffd44 	movi	r2,-11
+   10e78:	f800283a 	ret
+
+00010e7c <altera_avalon_jtag_uart_write>:
+ */
+
+int altera_avalon_jtag_uart_write(altera_avalon_jtag_uart_state* sp, 
+  const char * ptr, int count, int flags)
+{
+  unsigned int base = sp->base;
+   10e7c:	21000017 	ldw	r4,0(r4)
+{
+   10e80:	3005883a 	mov	r2,r6
+
+  const char * end = ptr + count;
+   10e84:	298d883a 	add	r6,r5,r6
+
+  while (ptr < end)
+   10e88:	29800136 	bltu	r5,r6,10e90 <altera_avalon_jtag_uart_write+0x14>
+    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
+      IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
+
+  return count;
+}
+   10e8c:	f800283a 	ret
+    if ((IORD_ALTERA_AVALON_JTAG_UART_CONTROL(base) & ALTERA_AVALON_JTAG_UART_CONTROL_WSPACE_MSK) != 0)
+   10e90:	20c00137 	ldwio	r3,4(r4)
+   10e94:	18ffffec 	andhi	r3,r3,65535
+   10e98:	183ffb26 	beq	r3,zero,10e88 <altera_avalon_jtag_uart_write+0xc>
+      IOWR_ALTERA_AVALON_JTAG_UART_DATA(base, *ptr++);
+   10e9c:	29400044 	addi	r5,r5,1
+   10ea0:	28ffffc7 	ldb	r3,-1(r5)
+   10ea4:	20c00035 	stwio	r3,0(r4)
+   10ea8:	003ff706 	br	10e88 <altera_avalon_jtag_uart_write+0xc>
+
+00010eac <alt_dcache_flush_all>:
+  for (i = (char*) 0; i < (char*) NIOS2_DCACHE_SIZE; i+= NIOS2_DCACHE_LINE_SIZE)
+  { 
+    __asm__ volatile ("flushd (%0)" :: "r" (i));
+  }
+#endif /* NIOS2_DCACHE_SIZE > 0 */
+}
+   10eac:	f800283a 	ret
+
+00010eb0 <alt_dev_null_write>:
+ */
+
+static int alt_dev_null_write (alt_fd* fd, const char* ptr, int len)
+{
+  return len;
+}
+   10eb0:	3005883a 	mov	r2,r6
+   10eb4:	f800283a 	ret
+
+00010eb8 <alt_icache_flush_all>:
+void alt_icache_flush_all (void)
+{
+#if NIOS2_ICACHE_SIZE > 0
+  alt_icache_flush (0, NIOS2_ICACHE_SIZE);
+#endif
+}
+   10eb8:	f800283a 	ret
+
+00010ebc <altera_nios2_gen2_irq_init>:
+ * To initialize the internal interrupt controller, just clear the IENABLE
+ * register so that all possible IRQs are disabled.
+ */
+void altera_nios2_gen2_irq_init(void) 
+{
+    NIOS2_WRITE_IENABLE(0);
+   10ebc:	000170fa 	wrctl	ienable,zero
+}
+   10ec0:	f800283a 	ret
+
+00010ec4 <strlen>:
+   10ec4:	2005883a 	mov	r2,r4
+   10ec8:	10c00007 	ldb	r3,0(r2)
+   10ecc:	1800021e 	bne	r3,zero,10ed8 <strlen+0x14>
+   10ed0:	1105c83a 	sub	r2,r2,r4
+   10ed4:	f800283a 	ret
+   10ed8:	10800044 	addi	r2,r2,1
+   10edc:	003ffa06 	br	10ec8 <strlen+0x4>
